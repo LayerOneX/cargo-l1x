@@ -1,0 +1,50 @@
+name: Test
+
+on: [pull_request]
+
+env:
+    CARGO_TERM_COLOR: always
+
+jobs:
+  fmt:
+    name: Code style
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Check cargo fmt
+        run: cargo fmt --check
+  typos:
+    name: Typos
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Install Rust Stable
+        run: rustup toolchain install stable
+      - name: Install typos
+        run: cargo install typos-cli
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Run typos
+        run: typos .
+  tests:
+    name: "Test"
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Install Rust Stable
+        run: rustup toolchain install stable
+      - name: Install Rust wasm32 target
+        run: rustup target add wasm32-unknown-unknown
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Install LLVM and Clang
+        uses: KyleMayes/install-llvm-action@v2
+        with:
+          version: 15.0
+      - name: llvm-config
+        run: llvm-config --version --bindir --libdir
+      - name: Install LLVM and Clang
+        uses: KyleMayes/install-llvm-action@v2 
+        with:
+          version: 17.0
+      - name: Test
+        run: cargo test
