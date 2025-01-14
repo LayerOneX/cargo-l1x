@@ -1,6 +1,10 @@
-# cargo-l1x
+# cargo-l1x (L1X VM Contract Builder (Cargo Templates))
 
-L1X build tool
+Comprehensive contract development templates for the L1X Virtual Machine.
+
+# Description
+
+Build smart contracts quickly and efficiently on the L1X VM with modular and pre-configured Cargo templates. This repository includes fungible token (FT), non-fungible token (NFT), and other contract templates to streamline the development process. Ideal for developers new to L1X or looking for a faster way to prototype. Use the Contract Builder to compile and build contracts.
 
 # Installation
 
