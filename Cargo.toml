@@ -2,8 +2,8 @@
 name = "cargo-l1x"
 version = "0.1.1"
 edition = "2021"
-authors = ["The L1X Project Developers"]
-license = "Apache-2.0"
+authors = ["L1XFoundation"]
+license = "Polyform-Perimeter-1.0.0"
 keywords = ["l1x"]
 readme = "README.md"
 description = """
