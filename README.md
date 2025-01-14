@@ -1,4 +1,4 @@
-# cargo-l1x (L1X VM Contract Builder (Cargo Templates))
+# cargo-l1x - L1X VM Contract Builder (Cargo Templates) 
 
 Comprehensive contract development templates for the L1X Virtual Machine.
 
